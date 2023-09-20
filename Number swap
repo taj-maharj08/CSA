@@ -1,0 +1,22 @@
+public class MathEx{
+    public static void main(String[]args){
+        System.out.println(swap(132));
+        System.out.println(swap(436));
+        System.out.println(swap(1078));
+    }
+    public static int swap(int num){
+        int tens = num%100/10;
+        int ones = num%10;
+        num = num-tens*10-ones;
+        return num+ones*10+tens;
+    }
+    public static void timeLeft(int curHour, int curMin, int depHour, int depMin){
+        int totalCurTime = curHour*60+curMin;
+        int totalDepMin = depHour*60+depMin;
+        int remTime = totalDepMin-totalCurTime;
+        int hours = remTime/60;
+        int mins = remTime%60;
+        System.out.println();
+
+    }
+}
